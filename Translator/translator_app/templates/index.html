@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Translator</title>
+    </head>
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="translate" required>
+            <br><br>
+            <select required name="language">
+                <option value="Hindi">Hindi</option>
+                <option value="English">English</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Tamil">Tamil</option>
+                <option value="French">French</option>
+            </select>
+            <br>
+            <input type="submit" value="Translate">
+        </form>
+    </body>
+</html>
